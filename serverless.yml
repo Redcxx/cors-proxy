@@ -2,7 +2,9 @@ service: cors-proxy
 
 plugins:
   - serverless-offline
-
+  - serverless-plugin-common-excludes  # https://github.com/serverless/serverless/issues/10944#issuecomment-1091936902
+  - serverless-plugin-include-dependencies
+  
 provider:
   name: aws
   runtime: nodejs12.x
@@ -28,4 +30,8 @@ functions:
       - http:
           path: ''
           method: put
+          cors: true
+      - http:
+          path: ''
+          method: options
           cors: true
