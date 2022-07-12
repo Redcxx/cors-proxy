@@ -2,6 +2,12 @@
 
 Simple AWS Lambda based proxy server for making CORS requests from browser to any HTTP server.
 
+### About This Fork
+This fork is created because the original repo does not seem to be maintained, it fixes 2 critical issues of the original repo:
+1. Handle cors preflight request.
+2. Exclude unnecessary serverless common packages.
+
+
 ### Run locally
 
 #### 1. Install
